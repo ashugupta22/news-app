@@ -1,0 +1,112 @@
+.top-navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background-color: white;
+    box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%),
+        0px 4px 5px 0px rgb(0 0 0 / 14%),
+        0px 1px 10px 0px rgb(0 0 0 / 12%);
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    font-size: 26px;
+    color: #42a2a2;
+    font-weight: bold;
+    transition: .4s ease-in-out;
+}
+
+.logo:hover {
+    color: #42a2a2;
+}
+
+.navbar-menu-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.navbar-menu-items .active {
+    background-color: #42a2a2;
+    color: white;
+}
+
+.navbar-menu-items li {
+    padding: 0 20px;
+}
+
+.navbar-menu-items li a {
+    display: inline-block;
+    padding: 8px 16px;
+    color: #42a2a2;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.navbar-menu-items li a:hover {
+    background-color: #42a2a2;
+    color: white;
+}
+
+.navbar-toggler {
+    display: none;
+    padding-right: 30px;
+    /* transition: 1s ease-in-out; */
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+
+/* ------------------------------------Media queries----------------------- */
+@media only screen and (max-width: 992px) {
+    .top-navbar {
+        justify-content: flex-start;
+        padding: 20px;
+    }
+
+    .navbar-toggler {
+        display: block;
+    }
+
+    .navbar-menu-items {
+        display: block;
+        padding: 0;
+        position: fixed;
+        /* top: 79px; */
+        top: 0;
+        left: -200px;
+        width: 200px;
+        height: 100vh;
+        background-color: white;
+        box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%),
+            0px 4px 5px 0px rgb(0 0 0 / 14%),
+            0px 1px 10px 0px rgb(0 0 0 / 12%);
+        transition: .4s ease-in-out;
+    }
+
+    .navbar-menu-items.open {
+        left: 0px;
+    }
+
+    .navbar-menu-items li a {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .navbar-menu-items li {
+        padding: 0;
+        padding-top: 20px;
+    }
+
+    /* .shift-logo {
+        margin-left: 120px;
+        transition: .4s ease-in-out;
+    } */
+}

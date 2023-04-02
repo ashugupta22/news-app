@@ -1,0 +1,19 @@
+
+.home-wrapper{
+    /* max-width: 1400px;
+    margin: auto;  */
+    transition: .4s ease-in-out;
+}
+
+.container {
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/* ------------------------Media Queries---------------------- */
+@media only screen and (max-width: 992px){
+    .shift-wrapper{
+        margin-left: 200px;
+        transition: .4s ease-in-out;
+    }
+}
